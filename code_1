@@ -1,0 +1,26 @@
+```python
+import requests
+import lxml
+from bs4 import BeautifulSoup
+from requests.api import head
+import csv
+from datetime import datetime
+
+# создаем словарь с заголовками запроса
+headers = {
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
+}
+
+def get_data(url):
+    # отправим гет запрос на страницу, распечатаем результат, получим результат 200
+    response = requests.get(url=url, headers=headers)
+    print(response)
+
+ 
+def main():
+    get_data(url='https://fleetphoto.ru/entities/?rid=1')
+
+if __name__ == '__main__':
+    main()
+# Output <Response [200]>
