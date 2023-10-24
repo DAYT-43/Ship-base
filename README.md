@@ -9,7 +9,7 @@
 
 Прототипирование и дизайн: Microsoft Excel
 
-Сбор информации: Python (requests, BeautifulSoup, WebScraper)
+Сбор информации: Python (requests, BeautifulSoup), WebScraper
 
 Форматы файлов: html, csv, xlsx
 
