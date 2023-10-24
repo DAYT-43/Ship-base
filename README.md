@@ -18,21 +18,9 @@
 
 </aside>
 
-## Содержание:
-
-**Предисловие и краткое описание проекта**: 
-
-**Профиль компании**
-
-**Проблема**: 
-
-**Обзор проекта**
-
-**График и бюджет**
-
-**Перспективы и развитие проекта**
-
-**Отчет о проделанной работе по проекту**
+## **Аннотация**:
+Данный проект был реализован в октябре 2022 года, на тот момент было достаточно получить всю информацию в Excel файлах и сделать из нее реестр. 
+В данной стадии проект не отражает моих текущих навыков в остальных инструментах, но он размещен как старт для более крупного проекта.
 
 ## **Предисловие и краткое описание проекта**:
 
@@ -65,15 +53,16 @@
 - Приобрел ценные навыки в области парсинга на Python;
 - Повысил скорость сбора информации в интернете разы;
 - Отточил навыки подготовки “сырых” данных к аналитике на реальном проекте;
-- *Основная рабочая область реестра*
+
+* Основная рабочая область реестра*
     
  ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/3981a874-a214-412e-beba-7a9af616965a)
     
-    Дополнительные листы 
+* Дополнительные листы 
     
  ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/f7d28bb9-1d4f-420e-bfb7-a2ce2782ed33)
     
-- *Общий дашборд*
+* Общий дашборд*
     
  ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/77491d1f-7d8a-4cd7-a52c-0b7a299414b5)
     
@@ -100,7 +89,7 @@
 
 После появления информации о проработке менеджером определенного корабля, информация по кораблю заноситься в CRM Битрикс 24, как Объект и сделка.
 
-### Функции проекта ****“Реестр Судостроения”
+### Функции проекта “Реестр Судостроения”
 
 1. Позволяет быстро получать информацию о необходимых кораблях, с помощью фильтров Excel;
 2. Аккумулирует информацию  и распределяет по блокам;
@@ -128,133 +117,6 @@
 
 Датасет собран из сайтов водный транспорт https://fleetphoto.ru/  и Корабел.ру https://www.korabel.ru/, затем заполнено вручную с сайтов Медиапалуба и др.
 
-### Создание парсера сайта “Водный транспорт” на Python:
-
-Необходимо, чтобы парсер скачивал информацию о всех проектах и делал страницу в Excel  файле с разбивкой по листам (по Судостроительным заводам)
-
-Изначально план был такой, но…
-
-Изучая структуру сайта Водный транспорт и Корабел.ру с целью понять что их связывает, найти общие ключи для данных, написал парсер, и получил список заводов с сайта Водный транспорт. Но чтобы получить необходимые данные быстрее, нашел и воспользовался решением из коробки, так называемым WebScraper и получил результат быстрее.
-
-- Заметки из блокнота (исследование сайтов)
-    
-    Сайт [korabel.ru](http://korabel.ru) 
-    
-    - Скрины
-      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/5ec5453c-45bd-4e43-8d2f-579dd43baa1b)
-    
-      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/dd8d42c0-aa14-43c1-804b-8a9a2cf61193)
-
-      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/72da7738-7662-44e4-ab2f-e41af0522e04)
-
-        
-    
-    Требуемые судостроительные предприятия России находятся по адресу 
-    
-    https://fleetphoto.ru/entities/?rid=1
-    
-    [https://fleetphoto.ru/entities/?rid=](https://fleetphoto.ru/entities/?rid=1)2 если поставить цифру 2, то будут судостроительные предприятия Беларуссии, и т.д. (цифра отвечает за страну)
-    
-    С данной страницы нужно получить все ссылки на все судостроительные заводы, всего 8 страниц данных
-    
-    пагинация, каждая страница по 50 заводов 
-    
-    https://fleetphoto.ru/entities/?rid=1&st=350
-    
-    **rid:** 1 **st:** 350
-    
-    оффсет +50
-    
-- Код / Code Python
-    
-    ```python
-    import requests
-    import lxml
-    from bs4 import BeautifulSoup
-    from requests.api import head
-    import csv
-    from datetime import datetime
-    
-    # создаем словарь с заголовками запроса
-    headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
-    }
-    
-    def get_data(url):
-        # отправим гет запрос на страницу, распечатаем результат, получим результат 200
-        response = requests.get(url=url, headers=headers)
-        print(response)
-    
-     
-    def main():
-        get_data(url='https://fleetphoto.ru/entities/?rid=1')
-    
-    if __name__ == '__main__':
-        main()
-    # Output <Response [200]>
-    ```
-    
-    ```python
-    import requests
-    import lxml
-    from bs4 import BeautifulSoup
-    from requests.api import head
-    import csv
-    from datetime import datetime
-    
-    # создаем словарь с заголовками запроса
-    headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
-    }
-    
-    def get_data(url):
-        response = requests.get(url=url, headers=headers)
-        # print(response)
-    # Записываем информацию в html файл
-        with open(file='index3.html', mode='w', encoding='UTF-8') as file:
-            file.write(response.text)
-      
-    def main():
-        get_data(url='https://fleetphoto.ru/entities/?rid=1')
-    
-    if __name__ == '__main__':
-        main()
-    ```
-    
-    ```python
-    import requests
-    import lxml
-    from bs4 import BeautifulSoup
-    from requests.api import head
-    import csv
-    from datetime import datetime
-    
-    # создаем словарь с заголовками запроса
-    headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
-    }
-    
-    def get_data(url):
-        response = requests.get(url=url, headers=headers)
-        # print(response)
-    # Комментирую код, чтобы не долбить сайт запросами
-       # with open(file='index3.html', mode='w', encoding='UTF-8') as file:
-        #    file.write(response.text)
-      
-    def main():
-        get_data(url='https://fleetphoto.ru/entities/?rid=1')
-    
-    if __name__ == '__main__':
-        main()
-    ```
-    
-- Полученный список компаний с сайта
-    
-![image](https://github.com/DAYT-43/Ship-base/assets/80617386/b7d331c4-d8b6-4ef3-8641-efbc45ec57c7)
-    
 
 ### Сбор информации с помощью WebScraper:
 
@@ -371,6 +233,25 @@ https://fleetphoto.ru/entities/?rid=1&st=350
 **rid:** 1 **st:** 350
 
  оффсет +50
+
+### Создание парсера сайта “Водный транспорт” на Python:
+
+Необходимо, чтобы парсер скачивал информацию о всех проектах и делал страницу в Excel  файле с разбивкой по листам (по Судостроительным заводам)
+
+Изначально план был такой, но…
+
+Изучая структуру сайта Водный транспорт и Корабел.ру с целью понять что их связывает, найти общие ключи для данных, написал парсер, и получил список заводов с сайта Водный транспорт. Но чтобы получить необходимые данные быстрее, нашел и воспользовался решением из коробки, так называемым WebScraper и получил результат быстрее.
+
+- Заметки из блокнота (исследование сайтов)
+    
+    Сайт [korabel.ru](http://korabel.ru) 
+    
+    - Скрины
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/5ec5453c-45bd-4e43-8d2f-579dd43baa1b)
+    
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/dd8d42c0-aa14-43c1-804b-8a9a2cf61193)
+
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/72da7738-7662-44e4-ab2f-e41af0522e04)
 
 
  > Данный проект гораздо больше чем один парсер. Это лишь 1% от всей работы. По возможности буду дополнять его и продолжать разработку идеи.
