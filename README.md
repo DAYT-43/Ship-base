@@ -39,10 +39,12 @@
 Для выявления актуальных стадий строительства завода по нескольким заводам провел парсинг статей за 15 лет, а это сотни тысяч новостей (строк).
 
 - *Скрины выгрузки статей для выявления стадий строительства корабля*
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/9676cdc6-1f9f-4ff3-b4b5-28bec190fa28/Untitled.png)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/b22d36bc-9e55-49ea-945f-3025810fcbff/Untitled.png)
+  ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/465562f8-5b5f-45aa-955d-ea2c9623c04e)
+
+  ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/949e2515-b874-4422-bb9a-de3423c932a0)
+
+ 
+
     
 
 ### **Итоги работ:**
@@ -57,15 +59,15 @@
 - Отточил навыки подготовки “сырых” данных к аналитике на реальном проекте;
 - *Основная рабочая область реестра*
     
-    ![Screenshot_2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/f1fc8158-0b20-4324-9c6a-878dae9f3c3e/Screenshot_2.png)
+ ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/3981a874-a214-412e-beba-7a9af616965a)
     
     Дополнительные листы 
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/a3bfae15-73d4-4e98-adce-122dfcb4a88a/Untitled.png)
+ ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/f7d28bb9-1d4f-420e-bfb7-a2ce2782ed33)
     
 - *Общий дашборд*
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/8e1ee8f6-2cdf-4257-95bd-1a098c3563be/Untitled.png)
+ ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/77491d1f-7d8a-4cd7-a52c-0b7a299414b5)
     
 
 ## **Профиль компании:**
@@ -94,9 +96,10 @@
 
 1. Позволяет быстро получать информацию о необходимых кораблях, с помощью фильтров Excel;
 2. Аккумулирует информацию  и распределяет по блокам;
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/154edecc-79b9-4c25-8372-b1dd9cd11092/Untitled.png)
-    
+
+![image](https://github.com/DAYT-43/Ship-base/assets/80617386/9ea5be94-3123-400e-a327-954594044663)
+
+     
 3. Фиксирует продажи дистрибьюторов и компании в “блоке продаж”;
 4. С помощью формул Excel:
     1. Высчитывает даты строительства кораблей;
@@ -138,12 +141,12 @@
     Сайт [korabel.ru](http://korabel.ru) 
     
     - Скрины
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/566f6b99-726b-4017-87bf-699706847952/Untitled.png)
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23af2585-60de-407c-9fa4-e27119347e7d/Untitled.png)
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/42081a4a-6d6a-41bd-9032-71036f83daa4/Untitled.png)
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/5ec5453c-45bd-4e43-8d2f-579dd43baa1b)
+    
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/dd8d42c0-aa14-43c1-804b-8a9a2cf61193)
+
+      ![image](https://github.com/DAYT-43/Ship-base/assets/80617386/72da7738-7662-44e4-ab2f-e41af0522e04)
+
         
     
     Требуемые судостроительные предприятия России находятся по адресу 
@@ -250,7 +253,7 @@
     
 - Полученный список компаний с сайта
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7e4285c8-c355-457c-86d7-9b6905c7adce/52fe8063-d1a4-482d-8e57-a3135a168bcd/Untitled.png)
+![image](https://github.com/DAYT-43/Ship-base/assets/80617386/b7d331c4-d8b6-4ef3-8641-efbc45ec57c7)
     
 
 ### Сбор информации с помощью WebScraper:
@@ -261,7 +264,7 @@
 
 - Скрин отчета:
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaf9c881-7288-4425-ac96-3464a42320a4/Untitled.png)
+![image](https://github.com/DAYT-43/Ship-base/assets/80617386/407b0c27-2ebd-4b33-85b0-3b919d14ed6b)
     
 
 Учитывается “чистое” затраченное время, тоесть время без перерывов и переключений на другие задачи.
