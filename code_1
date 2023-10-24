@@ -1,4 +1,4 @@
-```python
+# python
 import requests
 import lxml
 from bs4 import BeautifulSoup
@@ -23,4 +23,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 # Output <Response [200]>
